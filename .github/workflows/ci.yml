@@ -22,7 +22,7 @@ jobs:
       - name: Clean Build
         run: ./mvnw clean compile --file pom.xml
       - name: Unit Test
-        run: ./mvnw clean test -- file pom.xml
+        run: ./mvnw test --file pom.xml
 
 
 

@@ -23,6 +23,8 @@ jobs:
         run: ./mvnw clean compile --file pom.xml
       - name: Unit Test
         run: ./mvnw test --file pom.xml
+      - name: Style format
+        run: ./mvnw checkstyle:check --file pom.xml
 
 
 

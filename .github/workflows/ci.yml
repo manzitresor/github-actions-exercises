@@ -19,4 +19,8 @@ jobs:
           distribution: "temurin"
       - name: Verify Java Version
         run: java -version
+      - name: Clean Build
+        run: ./mvnw clean compile --file pom.xml
+
+
 

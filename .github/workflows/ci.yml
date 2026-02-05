@@ -17,6 +17,7 @@ jobs:
         with:
           java-version: 21
           distribution: "temurin"
+          cache: maven
       - name: Verify Java Version
         run: java -version
       - name: Clean Build
@@ -25,6 +26,8 @@ jobs:
         run: ./mvnw test --file pom.xml
       - name: Style format
         run: ./mvnw spotless:check --file pom.xml
+      - name: Caching
+        run:
 
 
 

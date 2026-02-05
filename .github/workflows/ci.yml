@@ -26,8 +26,5 @@ jobs:
         run: ./mvnw test --file pom.xml
       - name: Style format
         run: ./mvnw spotless:check --file pom.xml
-      - name: Caching
-        run:
-
 
 

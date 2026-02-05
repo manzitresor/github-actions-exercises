@@ -26,5 +26,13 @@ jobs:
         run: ./mvnw test --file pom.xml
       - name: Style format
         run: ./mvnw spotless:check --file pom.xml
+      - name: Packaging Application
+        run: ./mvnw package -DskipTests --file pom.xml
+      - name: Upload JAR File
+        uses: actions/upload-artifact@v4
+        with:
+          name: application jar
+          path: target/*.jar
+          retention-days: 30
 
 
